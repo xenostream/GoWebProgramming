@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 'Go Web Programming: [02/02] Control Statements and Functions'
+title: 'Go Web Programming: [02/03] Control Statements and Functions'
 tags: goweb
----    
+---  
 
 # Control Statements and Functions
 
