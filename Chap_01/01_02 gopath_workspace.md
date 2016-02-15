@@ -1,6 +1,13 @@
-# $GOPATH 및 작업 디렉토리
-$GOPATH
 ---
+layout: post
+title: 'Go Web Programming: [01/02] GOPATH & Wroking Directory'
+tags: goweb
+---  
+
+# $GOPATH 및 작업 디렉토리
+
+# $GOPATH
+
 Go명령어를 이용할 경우 대부분의 작업은 ```$GOPATH``` 라는 환경변수에 절대적으로 의존하게 됩니다.    
 설치시 사용했었던, *$GOROOT* 환경변수와는 별도로 작동하는 변수입니다.    
 개발자가 작성한 모든 패키지의 루트가 되는 디렉토리를 지정하는 환경변수입니다.    
@@ -34,7 +41,7 @@ mkdir -p github.com/xenostream/mymath
 cd $GOPATH/src/github.com/xenostream/mymath
 ```
 sqrt.go 라는 파일을 생성한 후 다음과 같이 입력합니다. 
-```
+```go
 // Source code of $GOPATH/src/github.com/xenostream/mymath/sqrt.go
 package mymath
 
@@ -70,7 +77,7 @@ cd mathapp
 vi main.go
 ```
 상기 명령으로 mymath 패키지를 실제로 사용할 프로그램을 작성하는 것입니다.  다음과 같이 코드를 입력합니다.    
-```
+```go
 //$GOPATH/src/mathapp/main.go 
 package main
 
