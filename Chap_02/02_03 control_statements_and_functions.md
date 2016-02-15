@@ -1,3 +1,9 @@
+---
+layout: post
+title: 'Go Web Programming: [02/02] Control Statements and Functions'
+tags: goweb
+---    
+
 # Control Statements and Functions
 
 이 절에서는 Go 언어의 흐름 제어 및 함수에 대해 소개 합니다.
@@ -12,7 +18,7 @@
 이 문법을 대략적으로 설명하면, 만약 조건을 만족하면 무엇을하고 만족하지 않으면 어떤행동을 할지를 결정하는 것입니다.     
 
 Go 언어에서는 `if` 분기문의 특징은 괄호로 비교조건을 묶을 필요가 없습니다. 다음 코드를 참고 하시기 바랍니다.   
-``` Go
+```go
 if x> 10 {
     fmt.Println("x is greater than 10")
 } else {
@@ -23,7 +29,7 @@ if x> 10 {
 Go의`if`문의 장점중 하나는 조건 분기에서 변수를 선언 할 수 있습니다.    
 이 이렇게 선언한 변수의 범위는 선언된 블록내에만 존재하며 다른 곳에서는 사용할 수 없습니다.  
 
-``` Go
+```go
 // x 값을 계산한 후 x의 크기를 반환 합니다. 예제에서는 10 이상 여부를 판단 합니다.
 if x := computedValue(); x > 10 {
     fmt.Println("x is greater than 10")
@@ -35,7 +41,7 @@ if x := computedValue(); x > 10 {
 fmt.Println(x)
 ```
 또한, 여러가지 조건별로 검사를 할 수도 있습니다. 예제는 다음과 같습니다.    
-``` Go
+```go
 if integer == 3 {
     fmt.Println("The integer is equal to 3")
 } else if integer < 3 {
@@ -53,7 +59,7 @@ Go언어에서는 `goto` 키워드가 있습니다
 
  `goto` 문은 반드시 함수 내에서 미리 정의 된 태그(레이블)로 이동 합니다.   
 예를 들어 이러한 루프가 있다고 가정합니다.    
-``` Go
+```go
 func myFunc() {
     i := 0
 Here :           //행의 처음에서 시작하고 콜론을 마지막에 사용하여 태그로 표시합니다.     
@@ -84,7 +90,7 @@ for expression1; expression2; expression3 {
  
 이렇게 얘기하는 것보다, 예제를 보는 편이 빠르겠습니다.     
 
-``` Go
+```go
 package main
 import "fmt"
 
@@ -107,7 +113,7 @@ func main() {
 
 
 또한, `expression1`과 `expression3`를 생략 할 수 도 있습니다.     
-``` Go
+```go
 sum := 1
 for ; sum <1000 ; {
     sum += sum
@@ -115,7 +121,7 @@ for ; sum <1000 ; {
 ```
 이 예제에서는 `;`을 생략 할 수 있습니다. 다음과 같은 코드는 동일한 기능을 수행 합니다.    
 어디선가 낯이 익지 않습니까? 바로 `while` 문의 기능입니다.      
-``` Go
+```go
 sum := 1
 for sum < 1000 {
     sum += sum
@@ -126,7 +132,7 @@ for sum < 1000 {
 `break`는 현재 루프에서 탈출하며, `continue`는 조건 검사로 점프 합니다.    
 중첩 된 반복문의  경우`break` 명령으로, 한번에 중첩 반복문을 탈출 할 수 있습니다.     
 다음은 그 사용 예제입니다.       
-``` Go
+```go
 for index := 10; index > 0; index-- {
     if index == 5 {
         break      // 또는 continue
@@ -151,7 +157,7 @@ for k, v := range map {
 Go는 "여러개의 반환 값"을 반환하는 기능을 제공합니다. 하지만, 선언만하고 사용하지 않는 변수는 컴파일러 오류를    
 출력 합니다. 이런 상황에서 `_`를  사용하여 필요없는 반환 값을 무시할 수 있습니다.    
 
-``` Go
+```go
 for _ , v := range map {
     fmt.Println("map 's val :", v)
 }
@@ -164,7 +170,7 @@ for _ , v := range map {
 이런 많은류의 분기 코드는 보기에 혹은 읽기에 매우 좋지 않습니다. 또한 유지 보수도 쉽지 않게 되므로,   
 `switch`문을 사용하면 간단히 해결 할 수 있습니다. 이 문법은 다음과 같습니다.    
 
-``` Go
+```go
 switch sExpr {
     case expr1:
         some instructions
@@ -180,7 +186,7 @@ switch sExpr {
 Go의`switch`문은 매우 사용하기 편리하며, 식(expression)은 반드시 정수만 사용할 수 있는것이 아닙니다.    
 실행 과정은 위에서 아래까지 case문장중 일치하는 항목을 찾을 때까지 수행됩니다.    
 만약 `switch`에 일치하는 식이 없으면, `default` 문장을 수행합니다.    
-``` Go 
+```go 
 i := 10
 switch i {
     case 1:
@@ -249,7 +255,7 @@ func funcName(input1 type1, input2 type2) (output1 type1, output2 type2) {
 - 만약 반환 값이 있으면 함수에서 return 문을 추가해야 합니다.   
 
 다음은 실제로, 함수를 사용하는 예제 입니다. (Max 값을 계산 합니다)
-``` Go
+```go
 package main
 import "fmt"
 
@@ -285,7 +291,7 @@ Go 언어는 C에 비해 향상적인 특징을 가지고 있습니다.
 > 함수가 한번에 여러개의  반환 값을 가질 수 있습니다.
 
 코드를 통해서 알아보도록 하겠습니다.     
-``` Go
+```go
 package main
 import "fmt"
 
@@ -320,7 +326,7 @@ func SumAndProduct(A, B int) (add int, Multiplied int) {
 ### 가변 인자
 Go 함수는 가변 인자 기능을 지원하고 있습니다. 가변 인자를 받아들이는 함수는 불특정개의 인수를 처리합니다.    
  이를 위해서 함수가 가변 인자를 처리할 수 있도록하는 특별한 선언을 해야 합니다.     
-``` Go
+```go
 func myfunc(arg ...int) {}
 ```
 `arg ...int`는 Go에게 이 함수가 다수개의 인수를 받아들이는 함수라는 것을 알려 줍니다. 
@@ -415,7 +421,7 @@ Go 언어의 훌륭한 디자인 중 하나로 지연(defer) 문법이 있습니
 사용될 수 있습니다. 이렇게 처리하지 않는다면, 리소스 및 메모리  누수 등의 문제를 일으킬 수 있습니다.    
 즉, 리소스를 다루는 프로그램의 경우는 다음의 코드와 같이 처리해야만 합니다.     
 
-``` Go
+```go
 func ReadWrite() bool {
     file.Open("file")
     
@@ -437,7 +443,7 @@ func ReadWrite() bool {
 위의 코드는 많은 중복 부분이 보입니다. Go의 `defer`는 바로 이러한 문제를 해결 합니다.    
 이 기능으로, 코드는 중복부분을 줄이는 기능뿐만 아니라 프로그램을 더 읽기 좋게 만들어 줍니다. `defer`키워드 사용 후   
 지정된 함수가 함수를 종료하기 직전에 호출되는 것을 보장해 주게 됩니다.     
-``` Go
+```go
 func ReadWrite() bool {
     file.Open("file")
     defer file.Close()
@@ -453,7 +459,7 @@ func ReadWrite() bool {
 
 만약 여러개의 `defer`을 사용하는 경우는 `defer`는 LIFO 형식으로 수행됩니다.    
 따라서 다음의 코드는 `4 3 2 1 0`을 출력 합니다.
-``` Go
+```go
 for i := 0; i < 5; i++ {
     defer fmt.Printf("% d", i)
 }
@@ -468,7 +474,7 @@ Go언에서 함수또한 변수처럼 타입으로 처리할 수 있습니다. `
 type typeName func(input1 inputType1, input2 inputType2[...]) (result1 resultType1[...])
 ```
 함수를 변수로 다룸으로써 어떠한 장점이 있을까요? 다음의 예를 참조하시기 바랍니다.    
-``` Go
+```go
 package main
 import "fmt"
 
@@ -534,7 +540,7 @@ Go언어는 Java와 같은 예외처리를 하지 않습니다. 즉, 예외를 �
   입력 값을 보존한 후 정상적인 실행상태로 복원 할 수 있습니다.  
 
 다음 예제를 통해서 어떻게`panic`이 작동하는지 알아보도록 하겠습니다.       
-``` Go
+```go
 var user = os.Getenv("USER")
 
 func init() {
@@ -545,7 +551,7 @@ func init() {
 ```
 
 이 함수는 인수가 함수 실행시`panic`를 발생하는지 확인합니다 :
-``` Go 
+```go 
 func throwsPanic(f func()) (b bool) {
     defer func() {
         if x := recover(); x! = nil {
@@ -575,14 +581,14 @@ Go 프로그램은 자동으로 `init()`함수와 `main()`함수를 호출하기
 다음으로,  init 함수(있을 경우)가 실행되고, 마지막에 `main` 함수가 실행되는 구조 입니다.   
 다음 그림에서 실행 과정을 자세히 설명하고 있습니다.   
 
-![](images/2.3.init.png)   
+![](//images/2.3.init.png)   
 그림 2.6 main 함수를 사용하여 패키지 가져 오기 및 초기화 과정 그림  
 
 
 ### import
 Go 코드를 쓸 때는 import 명령으로 패키지 파일을 가져 오는 경우가 종종 있습니다.    
 대부분 사용하는 방법은 다음과 같습니다.    
-``` GO
+```go
 import (
     "fmt"
 )
