@@ -1,11 +1,17 @@
+---
+layout: post
+title: 'Go Web Programming: [02/04] Struct'
+tags: goweb
+---  
+
+
 # Struct
 
-## struct
 Go 언어는 C나 다른 언어와 마찬가지로 서로 다른 형태의 속성이나 필드의 컨테이너로 새로운 형태를   
 선언 할 수 있습니다. 예를 들어, 개인의 엔티티를 나타내는 `person` 형을 만들 수 있습니다.    
 이 엔티티는 속성을 가지고 있습니다.  성별과 나이 입니다. 이러한 형식은`struct`이라고 합니다.  
 다음은 예제 코드입니다.   
-``` Go
+```go
 type person struct {
     name string
     age int
@@ -16,7 +22,7 @@ struct 선언은 이렇게 간단히 끝이 납니다. 위의 struct형은 2개�
 - int 형 필드 age는 사용자의 나이를 저장하는 속성 입니다.
 
 이제 struct이 어떻게 사용되는지를 코드를 통해서 알아보도록 하겠습니다.   
-``` Go
+```go
 type person struct {
     name string
     age int
@@ -41,7 +47,7 @@ fmt.Printf("The person 's name is %s", P.name)   // P의 name 속성에 액세�
   P := new(person)
 
 다음의 예제를 통해서 일반적인 struct의 사용법에 대해서 설명합니다.     
-``` Go
+```go
 package main
 import "fmt"
 
@@ -95,7 +101,7 @@ func main() {
 
 익명 필드가 struct 인 경우,이 struct가 가진 모든 필드는 숨겨져 현재 정의하고 있는 struct에 포함됩니다.  
 예를 들어서 설명하겠습니다.    
-``` Go
+```go
 package main
 import "fmt"
 
@@ -134,20 +140,20 @@ func main() {
 }
 ```
 
-![](images/2.4.student_struct.png)   
+![](/images/2.4.student_struct.png)   
 그림 2.7 Student와 Human 상속 
 
 Student가 age와 name 속성에 액세스 할 때,  마치 자신의 필드 인 것처럼 접근 한 것을 볼 수 있습니다.    
 그렇습니다. 이것이 바로 익명 필드란 것입니다. 필드의 상속을 실현할 수 있습니다. 
 이건 OOP언어보다 간단하지 않습니까? 여기에 더 멋진 방법도 있습니다. student는 Human 필드 이름에서 액세스    
 할 수 있습니다. 아래의 코드를 참조 하십시오.   
-``` Go
+```go
 mark.Human = Human{"Marcus", 55, 220}
 mark.Human.age -= 1
 ```
 익명필드의 액세스 및 수정은 매우 간단합니다. 하지만 단순한 struct 필드이기 때문에 Go언어의 모든 내장형과   
 자신이 정의한 모든형을 익명 필드로 사용할 수 있습니다. 아래의 예를 참조하시기 바랍니다.       
-``` Go
+```go
 package main
 import "fmt"
 
@@ -197,7 +203,7 @@ st​​udent 내의 필드에 액세스하고,  human 필드에 액세스하지
 
 이처럼 익명 필드를 통해 필드상속을 쉽게 처리 할 수 있습니다. 익명형의 필드에 접근하고 싶다면 익명필드의 이름으로   
 액세스 할 수 있습니다. 아래의 예를 참조 하시기 바랍니다.    
-``` Go
+```go
 package main
 import "fmt"
 
