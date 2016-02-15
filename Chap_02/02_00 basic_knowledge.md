@@ -1,3 +1,9 @@
+---
+layout: post
+title: 'Go Web Programming: Go Foundation'
+tags: goweb
+---    
+
 # Basic Knowledge
 
 `Go` 언어는 C언어를 닮은 시스템 프로그래밍이 가능한 컴파일러 형 언어입니다.   
@@ -6,7 +12,7 @@
 
 우선 키워드가 무엇들이 있는지 살펴 보겠습니다.  
 
-``` Go
+```go   
 break    default     func   interface select
 case     defer       go     map       struct
 chan     else        goto   package   switch
