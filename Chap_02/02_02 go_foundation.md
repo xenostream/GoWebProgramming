@@ -322,8 +322,8 @@ var arr[n] type
 var arr[10] int     // int 형의 배열을 선언합니다.
 arr [0] = 42        // 배열의 인덱스는 0부터 시작합니다.
 arr [1] = 13        // 대입
-fmt.Printf("The first element is % d \ n", arr[0]) // 데이터를 추출하여 42를  반환 합니다.
-fmt.Printf("The last element is % d \ n", arr[9]) 
+fmt.Printf("The first element is %d \n", arr[0]) // 데이터를 추출하여 42를  반환 합니다.
+fmt.Printf("The last element is %d \n", arr[9]) 
 // 값이 할당되지 않은 마지막 요소를 반환합니다. 초기화 하지 않았으므로, 0이 반환 됩니다.  
 ```
 
