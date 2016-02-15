@@ -1,4 +1,10 @@
-# Hello, Go!!
+---
+layout: post
+title: 'Go Web Programming: Go Foundation'
+tags: goweb
+---    
+
+# Hello, Go!!  
 
 `Go`언어를 이용해서 응용 프로그램을 작성하기 전에 먼저 기본이되는 프로그램으로     
 시작 하도록 하겠습니다. 집을 짓기 전에 건물의 기초를 알아야 하듯이,   
@@ -12,7 +18,7 @@
 
 준비 되셨나요? 시작하겠습니다!
 
-```
+```go
 package main
 
 import "fmt"
