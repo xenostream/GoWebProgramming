@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 'Go Web Programming: Go Foundation'
+title: 'Go Web Programming: [02/00] Basic Knowledge'
 tags: goweb
----    
+---  
 
 # Basic Knowledge
 
