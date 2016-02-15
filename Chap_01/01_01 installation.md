@@ -1,3 +1,9 @@
+---
+layout: post
+title: 'Go Web Programming: Installation'
+tags: goweb
+---   
+
 # Installation
 
 
@@ -46,7 +52,7 @@ Go언의 일부분은 Plan 9 C컴파일러와 AT&T어셈블러를 이용해서 �
 ```
 
 쉘상태에서 *go* 명령을 사용하면 다음과 같이 표시됩니다.
-![](images/1.1.mac.png)    
+![](/images/1.1.mac.png)    
 <그림1.1> 소스코드로 설치한 후 go명령 입력화면
 
 상기와 같이 표시되었다면 정상적으로 Go언어의 개발환경을 갖추게 된 것입니다.    
