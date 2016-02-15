@@ -12,7 +12,7 @@ tags: goweb
 
 우선 키워드가 무엇들이 있는지 살펴 보겠습니다.  
 
-``` Go  
+```go
 break    default     func   interface select
 case     defer       go     map       struct
 chan     else        goto   package   switch
