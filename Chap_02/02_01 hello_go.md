@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Go Web Programming: Go Foundation'
+title: 'Go Web Programming: [02/01] Hello, Go!!'
 tags: goweb
 ---    
 
