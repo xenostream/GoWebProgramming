@@ -28,7 +28,7 @@ func main() {
 ```
 
 
-![](images/My.jpg)
+![](/images/My.jpg)
 
 [XenoStream](http://www.xenostream.com) 
 ######2016@ powered by [PilJin.Kwon](mailto://piljin.kwon@gmail.com)
