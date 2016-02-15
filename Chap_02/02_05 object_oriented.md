@@ -1,3 +1,9 @@
+---
+layout: post
+title: 'Go Web Programming: [02/05] Object Oriented'
+tags: goweb
+---  
+
 # Object Oriented
 
 앞의 두 장에서 함수와 struct를 설명 했습니다. 함수를 struct의 필드로 처리할 수 있습니다.   
@@ -7,7 +13,7 @@
 ## method
 사각형이라는 struct를 정의하고 이 사각형의 넓이는 구하는 프로그램을 작성하고 있다고 가정하겠습니다.     
 먼저, 일반적인 사고방식으로 접근하면 다음과 같이 프로그래밍 하게 됩니다.     
-``` Go
+```go
 package main
 import "fmt"
 
@@ -36,7 +42,7 @@ Rectangle 객체(여기서는 r1, r2)를  면적을 계산하는 함수에 그�
 아래의 그림은 타원 함수를 나타내고 있습니다. 이 함수는 struct에 속하지 않기(객체지향 용어로, 즉 class에 속하지 않는)    
 때문에 struct 외부에 별도로 존재하고,  개념적으로도  어떤 struct과도 연결되지 않는 일반적인 함수 입니다.    
 
-![](images/2.5.rect_func_without_receiver.png)  
+![](/images/2.5.rect_func_without_receiver.png)  
 그림 2.8 메소드와 struct의 관계도  
 
 분명 이런 구현 방법에는 무리가 있습니다. 또한 개념적으로도, "면적"은 "형상"의 한 속성 입니다.    
@@ -58,11 +64,11 @@ Go언어의 개발자 중 하나인 `Rob Pike`의 말을 잠시 빌리면 다음
 > "A method is a function with an implicit first argument, called a receiver."
 
 method의 문법은 다음과 같습니다. 
-``` Go
+```go
 func (r ReceiverType) funcName(parameters) (results)
 ```
 이전에 설명한 예제를 가지고 method를 설명하겠습니다.     
-``` Go
+```go
 package main
 
 import (
@@ -108,7 +114,7 @@ method를 사용할 때는 다음의  몇 가지를 주의하시기 바랍니다
 
 
 
-![](images/2.5.shapes_func_with_receiver_cp.png)   
+![](/images/2.5.shapes_func_with_receiver_cp.png)   
 그림 2.9 다른 struct의 method는 다르다.    
 
 위의 예에서 method area()는 각각 Rectangle와 Circle에 속한 메소드가 됩니다. 이때 Rectangle과 Circle이   
@@ -127,7 +133,7 @@ method는 struct 에서만 사용할 수 있는 것일까요? 당연히 아닙�
 type typeName typeLiteral
 ```
 다음의 예제는 사용자 정의형을 선언하는 예제입니다.    
-``` Go 
+```go 
 type ages int
 
 type money float32
@@ -148,7 +154,7 @@ m := months {
 
 그럼다시, `method` 설명으로 돌아와서, 사용자 정의형을 임의의 `method`와 연관지을 수 있습니다.   
 다음은 이러한 기능을 하는 조금 복잡한 예제를 살펴보겠습니다.     
-``` Go
+```go
 package main
 import "fmt"
 
@@ -274,7 +280,7 @@ Go는 receiver가 포인터임을 이미 알고 있습니다. 그래서 내부�
 > method도 상속 할 수 있습니다.    
 만약 익명필드가 한개의 메소드를 구현하는 경우이 익명 필드를 포함해서 sturct이 메소드를 호출 할 수 있습니다.      
 다음의 예제를 통해서 알아보도록 하겠습니다. 
-``` Go
+```go
 package main
 import "fmt"
 
@@ -313,7 +319,7 @@ func main() {
 위의 예에서 만약 Employee에서 SayHi을 구현하려면 어떻게하면 좋을까요?  간단합니다.    
 익명필드의 충돌처리와 같은 이치로, Employee에서도 메소드를 재 정의 할 수 있습니다. 익명 필드를 다시 작성하는    
 방법은 아래의 예를 참조 하십시오.
-``` Go
+```go
 package main
 import "fmt"
 
