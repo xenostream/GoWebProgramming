@@ -1,3 +1,8 @@
+---
+layout: post
+title: 'Introduction'
+---
+
 # Intro    
 
 먼저, `Go언어`의  세계로 오신걸 `환영`합니다.  
