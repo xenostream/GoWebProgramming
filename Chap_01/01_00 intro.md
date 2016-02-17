@@ -1,8 +1,8 @@
-+++
-date  = "2016-02-17"
-title = "Go Web Programming: [01/00] Intro"
-tags  = "goweb"
-+++ 
+---
+date: "2016-02-17"
+title: "Go Web Programming: [01/00] Intro"
+tags: "goweb"
+---
 
 
 # Intro    
