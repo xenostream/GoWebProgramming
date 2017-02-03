@@ -34,10 +34,7 @@ func main() {
 [XenoStream](http://www.xenostream.com) 
 ######2016@ powered by [PilJin.Kwon](mailto://piljin.kwon@gmail.com)
 
-Column 1 | *Column 2* | ~~Column 3~~ 
-----|-----|-----
- :--- | :---: | ---: 
- Cell 1 | **Cell 2** | Cell 3
+
   
   
 
